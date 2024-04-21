@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matrix Operations</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Matrix Operations</h2>
+
+    <label for="rows">Rows: </label>
+    <input type="number" id="rows" min="1" value="3">
+    
+    <label for="cols">Columns: </label>
+    <input type="number" id="cols" min="1" value="3">
+    
+    <button onclick="createMatrix()">Create Matrix</button>
+    <button onclick="transposeMatrix()">Transpose</button>
+    <button onclick="Matriks()">Matriks</button>
+    
+    
+    <h3>Matrix</h3>
+    <div id="matrixContainer"></div>
+
+    <script>
+        function createMatrix() {
+            const rows = parseInt(document.getElementById('rows').value);
+            const cols = parseInt(document.getElementById('cols').value);
+            var tambah = 1;
+
+            const matrixContainer = document.getElementById('matrixContainer');
+            matrixContainer.innerHTML = '';
+
+            const table = document.createElement('table');
+
+            for (let i = 0; i < rows; i++) {
+                const row = table.insertRow();
+
+                for (let j = 0; j < cols; j++) {
+                    const cell = row.insertCell();
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.value = tambah;
+                    cell.appendChild(input);
+                    tambah++;
+                }
+            }
+
+            matrixContainer.appendChild(table);
+        }
+
+        function transposeMatrix() {
+            const matrixContainer = document.getElementById('matrixContainer');
+            const table = matrixContainer.querySelector('table');
+
+            if (!table) {
+                alert('Create a matrix first!');
+                return;
+            }
+
+            const rows = table.rows.length;
+            const cols = table.rows[0].cells.length;
+
+            const transposedMatrix = [];
+
+            for (let j = 0; j < cols; j++) {
+                transposedMatrix[j] = [];
+                for (let i = 0; i < rows; i++) {
+                    const inputValue = parseFloat(table.rows[i].cells[j].querySelector('input').value);
+                    transposedMatrix[j][i] = inputValue;
+                }
+            }
+
+            matrixContainer.innerHTML = '';
+
+            const transposedTable = document.createElement('table');
+
+            for (let i = 0; i < transposedMatrix.length; i++) {
+                const row = transposedTable.insertRow();
+
+                for (let j = 0; j < transposedMatrix[0].length; j++) {
+                    const cell = row.insertCell();
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.value = transposedMatrix[i][j];
+                    cell.appendChild(input);
+                }
+            }
+
+            matrixContainer.appendChild(transposedTable);
+        }
+
+        function Matriks() {
+            const rows = parseInt(document.getElementById('rows').value);
+            const cols = parseInt(document.getElementById('cols').value);
+            var tambah = 5;
+
+            const matrixContainer = document.getElementById('matrixContainer');
+            matrixContainer.innerHTML = '';
+
+            const table = document.createElement('table');
+
+            for (let i = 0; i < rows; i++) {
+                const row = table.insertRow();
+
+                for (let j = 0; j < cols; j++) {
+                    const cell = row.insertCell();
+                    const input = document.createElement('input');
+                    input.type = 'text';
+                    input.value = tambah;
+                    cell.appendChild(input);
+                    tambah++;
+                }
+        }
+        matrixContainer.appendChild(table);
+    }
+    </script>
+
+</body>
+</html>

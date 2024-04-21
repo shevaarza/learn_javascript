@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Kelas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="anjay">
+    <div class="container">
+        <h1>Absensi Kelas</h1>
+        <form id="attendanceForm">
+            <label for="namasiswa">Nama Siswa:</label>
+            <input type="text" id="namasiswa" required>
+          <button type="submit" onclick="setabsen(nama)" >Absen</button>
+          
+        </form>
+    </div>
+    <div class="container">
+        <h1>Absensi Kelas</h1>
+        <form id="attendanceForm">
+          <label for="namasiswa">Add siswa :</label>
+          <input type="text" id="addnomer" name="email" required>
+          <input type="text" id="addnama" name="email" required>
+          <input type="text" id="addstatus" name="email" required>
+          <button type="submit" onclick="addsiswa()" >Absen</button>
+        </form>
+    </div>
+    <div class="container">
+        <h1>Absensi Kelas</h1>
+        <form id="attendanceForm">
+            <label for="namasiswa">dalate siswa :</label>
+            <input type="text" id="dalate" name="email" required>
+            <button type="submit" onclick="dalate(dalate)">delate siswa </button>
+        </form>
+    </div>
+</div>
+    <div class="container">
+        <h1>Absensi</h1>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="nama">1</td>
+                    <td id="nama">Bina</td>
+                    <td id="nama">''</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td >sheva</td>
+                    <td id="nama">''</td>
+                </tr>
+                <!-- Tambahkan baris absensi lainnya di sini -->
+            </tbody>
+        </table>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

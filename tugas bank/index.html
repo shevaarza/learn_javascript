@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tugas simulasi bank</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- tabel 1 -->
+    <div class="container1">
+        <table>
+            <thead>
+                <tr>
+                    <td>
+                    <label for="rekening">Pilih Nama orang</label>
+                    <select id="rekening" name="rekening">
+                     <option value="sheva">sheva</option>
+                    <option value="brina">brina</option>
+                    <option value="adam">adam</option>   
+                  </select>
+                    </td>
+                    <td>
+                        <label for="saldo">Nominal</label>
+                       <input type="text" id="saldo">
+                    </td>
+                    <td>
+                        <button onclick="tambahsaldo()">plus</button>
+                    </td>
+                    <td>
+                        <button onclick="kurangsaldo()">Minus</button>
+                    </td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+    <!-- tabel 2 -->
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Nama Rekening</th>
+          <th>Saldo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id="sheva">
+          <td>1</td>
+          <td>sheva</td>
+          <td>1000</td>
+        </tr>
+        <tr id="brina">
+          <td>2</td>
+          <td>brina</td>
+          <td>2000</td>
+        </tr>
+        <tr id="adam">
+          <td>3</td>
+          <td>adam</td>
+          <td>1500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+<script src="script.js"></script>
+</html>

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); */
+body {
+    font-family: 'Times New Roman', Times, serif;
+}
+.navbar {
+    display: flex;
+    margin-bottom: 10px;
+    padding: 10px 0;
+}
+.container-fluid {
+    width: 100%;
+    padding: 10px 60px;
+    display: flex;
+    justify-content:space-between ;
+    align-items: center;
+}
+.navbar-brand {
+    color: #ffd600;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navbar-menu ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.navbar-menu ul li a {
+    font-size: 19px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffd600;
+}
+.btn-panggil {
+    background-color:#ffd600;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.section {
+    margin-top: 10px;
+    display: flex;
+}
+.benner {
+    width: 100%;
+    height: 430px;
+    padding: 30px;
+}
+
+.hobi-body {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+.hobi-card {
+    width: 87%;
+    min-height: 350px;
+    background-color: white;
+    border-radius:10px ;
+    padding: 20px;
+}
+.hobi-card-header {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    border-radius: 10px;
+    background-position: center;
+    background-size: cover;
+}
+footer {
+    margin: 25px 0;
+}
+.footer {
+    padding: 20px;
+    text-align: center;
+}
+
+

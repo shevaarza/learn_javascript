@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>java script</title>
+</head>
+<body>
+    <h1>java script</h1>
+</body>
+<script>
+    function Mobil(merk,tahun){
+        this.merk = merk;
+        this.tahun = tahun;
+    }
+    Mobil.prototype.jenismobil = "sedan" ;
+    Mobil.prototype.startEngine = function(){
+        console.log ("engine started");
+    }
+
+    var mobilBaru = new Mobil("Toyota", 1945)
+    console.log(mobilBaru.jenismobil);
+    mobilBaru.startEngine();
+</script>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input data siswa</title>
+    <link rel="stylesheet" href="plugin\bootstrap-5.3.0-dist\bootstrap-5.3.0-dist\css\bootstrap.min.css">
+</head>
+<body>
+    <h2 class="text-center">INPUT DATA SISWA</h2>
+        <section class=" d-flex justify-content-center">
+            <div class="card" style="width: 34rem;">
+              <div class="card-body">
+                <form>
+                  <div class="mb-3 ">
+                    <label for="nama" class="form-label">Nama <span class="text-danger">*</span></label>
+                    <input type="text " class="form-control" id="nama" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3 ">
+                    <label for="nis" class="form-label">NIS <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="nis" aria-describedby="emailHelp">
+                  </div>
+                  <div class="mb-3">
+                    <label for="asalsekolah" class="form-label">Asal sekolah <span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="asalsekolah">
+                  </div>
+                  <div class="mb-3">
+                    <!-- <div class="form-check"> -->
+                        <label for="gender" class="d-block">kelamin <span class="text-danger">*</span></label>
+                        <input class="gender" type="checkbox" value="laki-laki" id="laki-laki">
+                        <label  for="laki-laki">
+                          Laki laki
+                        </label>
+                      <!-- </div> -->
+                      <div class="d-block">
+                        <input class="gender" type="checkbox" value="perempuan" id="perempuan" checked>
+                        <label = for="perempuan">
+                          perempuan
+                      </div>
+                  </div>
+                  <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="checkme">
+                    <label class="form-check-label" for="checkme" >Check me out</label>
+                  </div>
+                  <button type="button" class="btn btn-primary" id="button" disabled onclick="inputan();">Submit</button>
+                </form>
+                
+              </div>
+            </div>
+          </section>
+          <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="plugin\bootstrap-5.3.0-dist\bootstrap-5.3.0-dist\js\bootstrap.bundle.min.js"></script>    
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="plugin/script.js"></script>
+</body>
+
+</html>

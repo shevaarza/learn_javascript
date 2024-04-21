@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caculator</title>
+    <script src="./bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./bootstrap-5.3.0-dist/bootstrap-5.3.0-dist/css/bootstrap.css">
+</head>
+<body>
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.calculator {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#result {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+
+.operator {
+    background-color: #f5a623;
+    color: #fff;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+  <div class="calculator">
+    <input type="text" id="result" readonly>
+    <div class="buttons">
+        <button onclick="addnumber('7', true)">7</button>
+        <button onclick="addnumber('8' , true)">8</button>
+        <button onclick="addnumber('9', true)">9</button>
+        <button class="operator" onclick="clearResult()">C</button>
+        <button onclick="addnumber('4', true)">4</button>
+        <button onclick="addnumber('5' ,true)">5</button>
+        <button onclick="addnumber('6', true)">6</button>
+        <button class="operator" onclick="addOperator('/' ,false)">/</button>
+        <button onclick="addnumber('1', true)">1</button>
+        <button onclick="addnumber('2' ,true)">2</button>
+        <button onclick="addnumber('3' ,true)">3</button>
+        <button class="operator" onclick="addOperator('*' , false)">x</button>
+        <button class="operator" onclick="addOperator('-' ,false)">-</button>
+        <button class="operator" onclick="deleteItemAngkaTemp('>' , false)">></button>
+        <button class="operator" onclick="addOperator('+' ,false)">+</button>
+        
+        <button onclick="kakulatorhasil()">=</button>
+    </div>
+</div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+        </div>
+    </section>
+</body>
+</html>

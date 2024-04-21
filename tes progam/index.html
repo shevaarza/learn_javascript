@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Absensi Siswa</title>
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    th, td {
+        border: 1px solid #ddd;
+        padding: 8px;
+        text-align: left;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    form {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+
+<h2>Data Siswa</h2>
+<table id="siswaTable">
+    <tr>
+        <th>Nama</th>
+        <th>Status Kehadiran</th>
+    </tr>
+    <tr>
+        <td>John Doe</td>
+        <td id="statusJohn">-</td>
+    </tr>
+    <tr>
+        <td>Jane Smith</td>
+        <td id="statusJane">-</td>
+    </tr>
+    <!-- Tambahkan baris siswa lainnya sesuai kebutuhan -->
+</table>
+
+<form id="absensiForm">
+    <label for="namaSiswa">Nama Siswa:</label>
+    <select id="namaSiswa">
+        <option value="John">John Doe</option>
+        <option value="Jane">Jane Smith</option>
+        <!-- Tambahkan opsi untuk siswa lainnya sesuai kebutuhan -->
+    </select>
+    <label for="status">Status Kehadiran:</label>
+    <select id="status">
+        <option value="hadir">Hadir</option>
+        <option value="tidak-hadir">Tidak Hadir</option>
+    </select>
+    <button type="button" onclick="updateAbsensi()">Submit</button>
+</form>
+
+<script>
+    function updateAbsensi() {
+        var namaSiswa = document.getElementById("namaSiswa").value;
+        var status = document.getElementById("status").value;
+        var statusCell = document.getElementById("status" + namaSiswa);
+
+        if (status === "hadir") {
+            statusCell.textContent = "Hadir";
+            statusCell.style.color = "green";
+        } else if (status === "tidak-hadir") {
+            statusCell.textContent = "Tidak Hadir";
+            statusCell.style.color = "red";
+        }
+    }
+</script>
+
+</body>
+</html>

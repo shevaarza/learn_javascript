@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Nama</title>
+</head >
+<body>
+    <h2>Pencarian Nama</h2>
+    <label for="searchInput">Masukkan Nama:</label>
+    <input type="text" id="searchInput">
+    <button onclick="searchName()">Cari</button>
+    <div id="searchResult"></div>
+
+    <script>
+        // Array berisi nama-nama yang akan dicari
+        const names = ['John', 'Jane', 'Doe', 'Alice', 'Bob', 'Charlie'];
+
+        function searchName() {
+            const searchQuery = document.getElementById('searchInput').value.toLowerCase();
+            const searchResult = document.getElementById('searchResult');
+            searchResult.innerHTML = ''; // Bersihkan hasil pencarian sebelumnya
+
+            const foundNames = names.filter(name => name.toLowerCase().includes(searchQuery));
+
+            if (foundNames.length > 0) {
+                const resultList = document.createElement('ul');
+                foundNames.forEach(name => {
+                    const listItem = document.createElement('li');
+                    listItem.textContent = name;
+                    resultList.appendChild(listItem);
+                });
+                searchResult.appendChild(resultList);
+            } else {
+                searchResult.textContent = 'Nama tidak ditemukan';
+            }
+        }
+    </script>
+</body>
+</html>

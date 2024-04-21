@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absensi Kelas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+    <div class="container">
+        <h1> tambahkan nama anda di sini</h1>
+        <table>
+            <tr>
+                <td>
+                    <input type="text" id="newStudent" placeholder="Nama Siswa">
+                </td>
+                <td>
+                    <button onclick="tambahSiswa()">Tambahkan Nama</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="container">
+        <h1>Daftar Nama siswa kelas C1</h1>
+        <table id="attendanceTable">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Nama</th>
+                    <th>Status</th>
+                    <th>Aksi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Isi tabel akan ditambahkan melalui JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
